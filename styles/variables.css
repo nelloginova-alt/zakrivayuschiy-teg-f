@@ -1,1 +1,29 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-font: 'Inter-Variable';
+    --accent-font: 'Press Start 2P';
+    --main-font-size: 18px;
+    --label-size: 14px;
+    --button-size: 14px;
+    --button-line-height: 90%;
+    --bold-font-weight: 715;
+    --normal-font-weight: 410;
+    --body-padding: 100px 0;
+    --logo-font-size: clamp(2.8125rem, 1.7599rem + 5.2632vw, 4.0625rem);
+    --subtitle-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
+    --font-color: #000;
+    --block-bg-color: #fff;
+    --block-border: 2px solid #000;
+    --button-border: 2px solid #000;
+    --header-font-wweight: 400;
+    --header-gap: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+    --header-margin: 0 0 100px;
+    --card-gap: 50px;
+    --body-bg-gradient:
+      repeating-linear-gradient(90deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(0deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+      linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+    --block-width: clamp(320px, 100%, 700px);
+    --button-padding: 12.5px 37px;
+    --button-save-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+}
