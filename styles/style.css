@@ -49,6 +49,7 @@
 
 .subtitle {
   font-size: var(--subtitle-size);
+  text-transform: uppercase;
 }
 
 .cards {
@@ -66,10 +67,6 @@
   border: var(--block-border);
 }
 
-.section:last-of-type {
-  margin-bottom: 50px;
-}
-
 .section__title {
   font-size: var(--main-font-size);
   padding: 4px 10px;
@@ -80,7 +77,11 @@
   width: 100%;
 }
 
-.section__info {
+.image-wow {
+  filter: contrast(1.1);
+}
+
+.section__content{
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -97,66 +98,183 @@
   right: 25px;
   font-family: var(--accent-font), sans-serif;
   font-size: var(--label-size);
+  color: var(--label-color);
+  mix-blend-mode: hard-light;
+  text-shadow:
+    -1px 0 var(--label-stroke), 
+    0 1px var(--label-stroke), 
+    1px 0 var(--label-stroke), 
+    0 -1px var(--label-stroke);
 }
+
+@supports((text-stroke: 1px var(--label-stroke)) or (-webkit-text-stroke: 1px var(--label-stroke))) {
+  .label {
+    -webkit-text-stroke: 1px var(--label-stroke);
+    text-stroke: 1px var(--label-stroke);
+    text-shadow: none;
+  }
+} 
 
 .button {
   font-family: var(--accent-font), sans-serif;
   font-size: var(--button-size);
   font-weight: var(--header-font-wweight);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color, #000);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.button:hover::before {
+  transform: translateX(0);
 }
 
 .card__buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
 }
 
 .card__icon-button {
   align-self: center;
-  background-color: transparent;
+  background-color: var(--button-bg-color);
   border: none;
 }
 
 .like-icon {
-  width: 27px;
-  height: 24px;
+  width: 39px;
+  height: 36px;
 }
 
 .card__like-button {
-  background-color: transparent;
+  background-color: var(--button-bg-color);
   padding: var(--button-padding);
   border: var(--button-border);
 }
 
 .button__text {
+  position: relative;
+  z-index: 2; 
+  color: var(--button-hover-color);
+  mix-blend-mode: difference;
   line-height: var(--button-line-height);
+}
+
+.image-fright {
+  filter: grayscale(1) contrast(1.15);
+}
+
+.image-win {
+  filter: saturate(115%);
+}
+
+.image-team {
+  filter: brightness(80%);
+}
+
+.image-stupid {
+  filter: hue-rotate(-20deg);
+}
+
+.image-exhausted {
+  filter: invert(1.2) brightness(80%);
+}
+
+.image-infinity {
+  filter: sepia(90%);
 }
 
 .button__save {
   --button-padding: 17px 20px;
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--block-bg-color);
+  background-color: var(--button-bg-color);
   border: var(--block-border);
   padding: var(--button-padding);
   gap: 8px;
 }
 
 .save-icon {
-  width: 28px;
-  height: 28px;
+  width: 21px;
+  height: 21px;
+  /* position: relative;
+  z-index: 2; 
+  fill: var(--button-hover-color);
+  mix-blend-mode: difference; */
 }
 
-@media (width >= 700px) {
+.dialog {
+  display: none;
+  width: var(--dialog-size);
+  max-width: 353px;
+  border: var(--block-border);
+  padding: 30px 40px;
+  background-color: var(--block-bg-color);
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+} 
+
+.dialog__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog-save {
+  width: 80px;
+  height: 80px;
+}
+
+.dialog__text {
+  font-family: var(--accent-font), sans-serif;
+  font-size: var(--dialog-fomt-size);
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  width: 100%;
+  justify-content: center;
+  background-color: var(--button-bg-color);
+  padding: 12.5px 0 10.5px;
+  text-align: center; 
+}
+
+@media (width <= 375px) {
   .button__save {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .save-icon {
-    width: 21px;
-    height: 21px;
+    width: 28px;
+    height: 28px;
   }
 }

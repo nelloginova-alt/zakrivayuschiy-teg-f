@@ -1,10 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
 :root {
     --main-font: 'Inter-Variable';
     --accent-font: 'Press Start 2P';
     --main-font-size: 18px;
     --label-size: 14px;
     --button-size: 14px;
+    --dialog-fomt-size: 14px;
     --button-line-height: 90%;
     --bold-font-weight: 715;
     --normal-font-weight: 410;
@@ -13,6 +15,9 @@
     --subtitle-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
     --font-color: #000;
     --block-bg-color: #fff;
+    --button-bg-color: #fff;
+    --label-color: rgb(0 0 0 / 0.5);
+    --label-stroke: rgb(255 255 255 / 0.5);
     --block-border: 2px solid #000;
     --button-border: 2px solid #000;
     --header-font-wweight: 400;
@@ -24,6 +29,9 @@
       repeating-linear-gradient(0deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
       linear-gradient(#e7e7e7 0.01%, #1a1a1a);
     --block-width: clamp(320px, 100%, 700px);
-    --button-padding: 12.5px 37px;
+    --button-padding: 10.5px 37px 7.5px;
     --button-save-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+    --dialog-size: clamp(341px, 90%, 353px);
+    --accent-color: #000;
+    --button-hover-color: #fff;
 }
