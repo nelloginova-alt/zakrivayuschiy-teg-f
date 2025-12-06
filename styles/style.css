@@ -141,6 +141,9 @@
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
@@ -151,23 +154,41 @@
 .card__buttons {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
 }
 
 .card__icon-button {
-  align-self: center;
+  display: flex;
+  align-items: center;
   background-color: var(--button-bg-color);
-  border: none;
+  border: 2px solid transparent;
+  padding: 0;
+  transition: outline 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
 }
 
 .like-icon {
-  width: 39px;
-  height: 36px;
+  width: 38px;
+  height: 35px;
+}
+
+.sparks {
+  opacity: 0;
 }
 
 .card__like-button {
   background-color: var(--button-bg-color);
   padding: var(--button-padding);
   border: var(--button-border);
+  min-width: 130px;
 }
 
 .button__text {
@@ -217,10 +238,10 @@
 .save-icon {
   width: 21px;
   height: 21px;
-  /* position: relative;
+  position: relative;
   z-index: 2; 
-  fill: var(--button-hover-color);
-  mix-blend-mode: difference; */
+  stroke: var(--button-hover-color);
+  mix-blend-mode: difference;
 }
 
 .dialog {

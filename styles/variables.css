@@ -29,9 +29,13 @@
       repeating-linear-gradient(0deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
       linear-gradient(#e7e7e7 0.01%, #1a1a1a);
     --block-width: clamp(320px, 100%, 700px);
-    --button-padding: 10.5px 37px 7.5px;
+    --button-padding: 12px 0 9px;
     --button-save-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
     --dialog-size: clamp(341px, 90%, 353px);
     --accent-color: #000;
     --button-hover-color: #fff;
+    --contour-like: #000;
+    --animation-fill-color: #FF0000;
+    --core-accent-color: #000;
+    --main-body-accent-color: #000;
 }
