@@ -30,14 +30,14 @@
 
 .header {
   width: var(--block-width);
-  min-height: 327px;
+  min-height: 368px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: var(--header-gap);
   font-family: var(--accent-font), sans-serif;
-  font-weight: var(--header-font-wweight);
+  font-weight: var(--header-font-weight);
   background-color: var(--block-bg-color);
   border: var(--block-border);
   margin: var(--header-margin);
@@ -74,7 +74,11 @@
 
 .section__image {
   display: block;
-  width: 100%;
+  max-height: 696px;
+  aspect-ratio: 1 / 1;
+  width: clamp(320px, 100%, 700px);
+  object-fit: cover;
+  object-position: center;
 }
 
 .image-wow {
@@ -119,6 +123,7 @@
   font-family: var(--accent-font), sans-serif;
   font-size: var(--button-size);
   font-weight: var(--header-font-wweight);
+  border: var(--button-border);
   transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -187,7 +192,6 @@
 .card__like-button {
   background-color: var(--button-bg-color);
   padding: var(--button-padding);
-  border: var(--button-border);
   min-width: 130px;
 }
 
@@ -240,7 +244,8 @@
   height: 21px;
   position: relative;
   z-index: 2;
-  stroke: var(--button-hover-color);
+  fill: var(--button-hover-color);
+  filter: invert(1);
   mix-blend-mode: difference;
 }
 
@@ -270,8 +275,9 @@
 }
 
 .dialog-save {
-  width: 80px;
-  height: 80px;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
 }
 
 .dialog__text {
@@ -290,6 +296,10 @@
 }
 
 @media (width <= 375px) {
+  .header {
+    min-height: 327px;
+  }
+
   .button__save {
     flex-direction: column;
   }

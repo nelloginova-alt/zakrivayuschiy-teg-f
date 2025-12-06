@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    --main-font: 'Inter-Variable';
+    --main-font: 'Inter-Variable', sans-serif;
     --accent-font: 'Press Start 2P';
     --main-font-size: 18px;
     --label-size: 14px;
@@ -20,7 +20,7 @@
     --label-stroke: rgb(255 255 255 / 0.5);
     --block-border: 2px solid #000;
     --button-border: 2px solid #000;
-    --header-font-wweight: 400;
+    --header-font-weight: 400;
     --header-gap: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
     --header-margin: 0 0 100px;
     --card-gap: 50px;
