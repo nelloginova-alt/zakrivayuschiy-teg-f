@@ -1,1 +1,1 @@
-https://nelloginova-alt.github.io/zakrivayuschiy-teg-f/
+https://github.com/nelloginova-alt/zakrivayuschiy-teg-f
