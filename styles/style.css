@@ -81,7 +81,7 @@
   filter: contrast(1.1);
 }
 
-.section__content{
+.section__content {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -193,7 +193,7 @@
 
 .button__text {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   color: var(--button-hover-color);
   mix-blend-mode: difference;
   line-height: var(--button-line-height);
@@ -239,7 +239,7 @@
   width: 21px;
   height: 21px;
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   stroke: var(--button-hover-color);
   mix-blend-mode: difference;
 }
@@ -286,7 +286,7 @@
   justify-content: center;
   background-color: var(--button-bg-color);
   padding: 12.5px 0 10.5px;
-  text-align: center; 
+  text-align: center;
 }
 
 @media (width <= 375px) {
