@@ -200,7 +200,7 @@
 }
 
 .image-fright {
-  filter: grayscale(1) contrast(1.15);
+  filter: contrast(1.15) sepia(90%);
 }
 
 .image-win {
@@ -216,11 +216,11 @@
 }
 
 .image-exhausted {
-  filter: invert(1.2) brightness(80%);
+  filter: invert(1.2) brightness(100%);
 }
 
 .image-infinity {
-  filter: sepia(90%);
+  filter: grayscale(1);
 }
 
 .button__save {
