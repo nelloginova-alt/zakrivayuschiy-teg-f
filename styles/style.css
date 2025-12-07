@@ -90,6 +90,7 @@
   flex-direction: column;
   gap: 25px;
   padding: 25px;
+  line-height: 21px;
 }
 
 .section__media {
@@ -247,6 +248,7 @@
   fill: var(--button-hover-color);
   filter: invert(1);
   mix-blend-mode: difference;
+  flex-shrink: 0;
 }
 
 .dialog {
